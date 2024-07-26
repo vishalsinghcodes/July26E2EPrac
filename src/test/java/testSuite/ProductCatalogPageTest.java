@@ -10,10 +10,6 @@ import org.testng.annotations.Test;
 
 import e2e.TestComponents.BaseTest;
 import e2e.TestComponents.RetryListener;
-import e2e.pageObjects.CartPage;
-import e2e.pageObjects.CheckoutPage;
-import e2e.pageObjects.LandingPageObject;
-import e2e.pageObjects.OrderDetailsPage;
 import e2e.pageObjects.ProductCatalogPage;
 
 public class ProductCatalogPageTest extends BaseTest{

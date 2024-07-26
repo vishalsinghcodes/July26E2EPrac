@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.testng.Assert;
-import org.testng.IRetryAnalyzer;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
