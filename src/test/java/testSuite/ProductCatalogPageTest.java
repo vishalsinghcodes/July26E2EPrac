@@ -9,6 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import e2e.TestComponents.BaseTest;
+import e2e.TestComponents.RetryListener;
 import e2e.pageObjects.CartPage;
 import e2e.pageObjects.CheckoutPage;
 import e2e.pageObjects.LandingPageObject;
@@ -25,7 +26,7 @@ public class ProductCatalogPageTest extends BaseTest{
 	}
 	
 	
-	@Test(dataProvider = "CorrectdataPro", groups = {"Regression"})
+	@Test(dataProvider = "CorrectdataPro", groups = {"Regression"},retryAnalyzer = RetryListener.class)
 	public void checkBlinkText(HashMap<String,String> data) throws IOException, InterruptedException{
 		ProductCatalogPage productcatalogpage = lp.loginapplication(data.get("username"), data.get("password"));
 		productcatalogpage.waitForElementstoappear(productcatalogpage.productdetailscardEle);

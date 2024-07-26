@@ -6,10 +6,12 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.testng.Assert;
+import org.testng.IRetryAnalyzer;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import e2e.TestComponents.BaseTest;
+import e2e.TestComponents.RetryListener;
 import e2e.pageObjects.CartPage;
 import e2e.pageObjects.CheckoutPage;
 import e2e.pageObjects.OrderDetailsPage;
@@ -33,7 +35,7 @@ public class E2ETests extends BaseTest{
 		
 	}
 	
-	@Test(dataProvider = "CorrectdataPro", groups = {"Regression"})
+	@Test(dataProvider = "CorrectdataPro", groups = {"Regression"}, retryAnalyzer = RetryListener.class)
 	public void PurchasemultipleProduct(HashMap<String,String> data) throws IOException, InterruptedException{
 		List<String> products = Arrays.asList("ZARA COAT 3");
 		ProductCatalogPage productcatalogpage = lp.loginapplication(data.get("username"), data.get("password"));

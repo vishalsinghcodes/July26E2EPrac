@@ -9,6 +9,7 @@
   
   <listeners>
 	  <listener class-name="e2e.TestComponents.ListenerClass"></listener>
+	  <listener class-name="e2e.TestComponents.RetryListener"></listener>
   </listeners>
   <test thread-count="5" name="Test">
     <classes>
